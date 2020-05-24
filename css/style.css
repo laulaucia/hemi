@@ -1,65 +1,155 @@
-p {
-  line-height: 2rem;
+* {
+  font-family: 'Georgia', 'serif';
+  color: #1f2273;
 }
-
-h2{
-  font-weight: 500;
-  text-shadow: 3px 3px midnightblue;
-}
-
-.ilimage{
-  border-radius: 20px;
-}
-.button-collapse {
-  color: #26a69a;
-}
-
-.parallax-container {
-  min-height: 500px;
-  line-height: 0;
-  height: auto;
-  /*color: rgba(255,255,255,.9);*/
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-  #logo {
-    width: 40%;
-    margin-top: -120px;
-  }
-  .tagline{
-  font-size: 1.7em;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-  #logo {
-    width: 70%;
-  }
-  .tagline{
-  font-size: 1em;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
+body {
   margin: 0;
+}
+p {
+  font-size: 18px;
+}
+header, #secondary-slider {
+  background: #f2e6dc;
+}
+header {
+  text-align: center;
+}
+header section, .media{
+  padding: 10px;
+}
+header section:first-child{
+  background:
+    url('https://hemiblue.com/images/buds.jpeg');
+  background-size: cover;
+}
+h3{
+  text-shadow: 3px 3px midnightblue;
+  color: white;
+}
+header img {
+  max-width: 100%;
+}
+.splide__slide__container {
+  border-radius: 10px;
+}
+.pick-your-own {
+  background: linear-gradient(#f2e6dc, #fff);
+  padding: 20px;
+}
+.card {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: .2rem 1.5rem 1.5rem;
+  background: #fff;
+  margin: 0.5rem 0;
+  border-radius: 2px;
+}
+.portfolio-holder {
+  clear: both;
+  text-align: center;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.portfolio-holder img {
+  max-width: 100%;
+  min-width: 100%;
+}
+.row-2{
+  grid-row: span 2 / auto;
+}
+.column-2{
+  grid-column: span 2 / auto;
+}
+@media only screen and (min-width: 650px) {
+  header {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+  }
+  .pick-your-own {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+  .pick-your-own .media {
+    grid-gap: 3px;
+  }
+  header section {
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .portfolio-holder{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .modal-content .modalgrid {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-gap: 15px;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .modal-content .modalgrid {
+    grid-template-columns: 3fr 4fr 3fr;
+  }
+  header {
+    grid-template-columns: 4fr 3fr;
+    grid-gap: 20px;
+  }
+}
+/* modal stuff */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 80vw;
+  text-align: center;
+}
+
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
